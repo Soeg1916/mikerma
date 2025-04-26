@@ -1,14 +1,10 @@
 {
-  "version": 2,
-  "public": true,
-  "cleanUrls": true,
-  "buildCommand": "npm run build",
+  "buildCommand": "npm install --include=dev && npm run build",
   "outputDirectory": "dist",
+  "installCommand": "npm install --include=dev",
+  "framework": null,
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/" }
+  ]
 }
