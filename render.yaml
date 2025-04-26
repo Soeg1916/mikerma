@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: miker-marketplace
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        value: postgresql://neondb_owner:npg_IDJ0VO7ixTmk@ep-wispy-butterfly-a4h05ebr-pooler.us-east-1.aws.neon.tech/neondb?sslmode=require
